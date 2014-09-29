@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Activity Cadastrar Multa - Tela dwe Informações do Veículo -->
+   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+       android:id="@+id/container"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical" >
+    
+    <!-- Layout para o título -->
+    <LinearLayout
+        android:id="@+id/linearhorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="vertical"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textSize="35sp"
+            android:layout_marginTop="20sp" />
+        
+	</LinearLayout>
+
+		<!-- Layout para o conteúdo da página -->
+       <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+                   
+		  <LinearLayout
+		      android:id="@+id/placa"
+		      android:layout_width="fill_parent"
+		      android:layout_height="wrap_content"
+		      >
+	              
+				<!-- String - Inserindo um TextView para conter a descrição "Placa:"-->
+	            <TextView
+	                android:id="@+id/lblplaca"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0"
+	                android:text="@string/lblplaca"
+	                android:textSize="18sp" />
+			
+				<!-- Input - criando um EditText para conter a informação letras e números da placa -->
+
+	            <EditText
+	                android:id="@+id/txtplaca"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center"
+	                android:layout_weight="0"
+	                android:ems="10"
+	                android:inputType="text" />
+            
+             </LinearLayout>
+
+		  
+		  <!-- Selects - Inserindo Spinners para selecionar Estado, Cidade, Espécie, Tipo e Marca do veículo -->
+
+		     <LinearLayout
+		         android:id="@+id/estado"
+		         android:layout_width="fill_parent"
+		         android:layout_height="match_parent"
+		         android:layout_weight="0" 
+		         android:layout_marginTop="10dp">
+
+	         <TextView
+	                android:id="@+id/lblestado"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0"
+	                android:text="@string/lblestado"
+	                android:textSize="18sp" />
+			
+            <Spinner
+                android:id="@+id/spnestado"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:entries="@array/estados_arrays"
+                android:prompt="@string/estados_prompt" />
+
+		</LinearLayout>
+		
+		     <LinearLayout
+		      android:id="@+id/cidade"
+		      android:layout_width="fill_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_marginTop="10dp"
+		      >
+	         <TextView
+	                android:id="@+id/lblcadade"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0"
+	                android:text="@string/lblcidade"
+	                android:textSize="18sp"/>
+
+            <Spinner
+                android:id="@+id/spncidade"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:entries="@array/cidades_arrays"
+                android:prompt="@string/cidades_prompt" />
+
+         </LinearLayout>
+             
+         <LinearLayout
+		      android:id="@+id/especie"
+		      android:layout_width="fill_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_marginTop="10dp"
+		      >
+	         <TextView
+	                android:id="@+id/lblespecie"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0"
+	                android:text="@string/lblespecie"
+	                android:textSize="18sp" 
+	                />
+	            
+             <Spinner
+                 android:id="@+id/spnespecie"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0"
+                 android:entries="@array/especie_arrays"
+                 android:prompt="@string/especie_prompt" />
+
+            </LinearLayout>
+
+         <LinearLayout
+		      android:id="@+id/tipo"
+		      android:layout_width="fill_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_marginTop="10dp"
+		      >
+	         <TextView
+	                android:id="@+id/lbltipo"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0"
+	                android:text="@string/lbltipo"
+	                android:textSize="18sp" />
+
+         <Spinner
+             android:id="@+id/spntipo"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="0"
+             android:entries="@array/tipo_arrays"
+             android:prompt="@string/tipo_prompt" />
+
+         </LinearLayout>
+         
+         <LinearLayout
+		      android:id="@+id/marca"
+		      android:layout_width="fill_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_marginTop="10dp"
+		      >
+	         <TextView
+	                android:id="@+id/lblmarca"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0"
+	                android:text="@string/lblmarca"
+	                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spnmarca"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:entries="@array/marca_arrays"
+                android:prompt="@string/marca_prompt" />
+     
+            </LinearLayout>
+		    
+		      <LinearLayout
+		      android:id="@+id/modelo"
+		      android:layout_width="fill_parent"
+		      android:layout_height="wrap_content"
+		       android:layout_marginTop="10dp"
+		      >
+	                          
+             <!-- String - Inserindo um TextView para conter a descrição "Modelo:"-->
+             <TextView
+                android:id="@+id/lblmodelo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@string/lblmodelo"
+                android:textSize="18sp"
+                /> 
+                
+			<!-- Input - criando um EditText para inserir o modelo do veículo -->
+
+            <EditText
+                android:id="@+id/modelo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0"
+                android:ems="10"
+                android:inputType="text" />
+            
+            </LinearLayout>
+            
+                 </LinearLayout>
+
+       		
+  			<!-- Layout para botões -->
+            <LinearLayout
+                android:id="@+id/buttons1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp" 
+                >
+       
+                <Button
+                    android:id="@+id/button_next1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/icon_next" />
+
+            </LinearLayout>    
+
+</LinearLayout>

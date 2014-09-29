@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ittran</string>
+
+    <!-- Nome Activits -->
+    <string name="title_activity_informacoes_veiculo">Informacoes do Veiculo</string>
+    <string name="title_activity_informacoes_infracao">Informacoes da Infracao</string>
+    <string name="title_activity_edit_local_infracao">Alterar Local da Infração</string>
+    <string name="title_activity_informacoes_condutor">Informacoes do Condutor</string>
+    <string name="title_activity_sobre">Sobre</string>
+    <string name="title_activity_sincronizar">Sincronizar</string>
+    <string name="title_activity_itens_action_bar">ItensActionBar</string>
+
+    <!-- Action-Bar Itens -->
+    <string name="action_nova_multa">Nova Multa</string>
+    <string name="action_sincronizar">Sincronizar</string>
+    <string name="action_sobre">Sobre</string>
+    <string name="action_sair">Sair</string>
+
+    <!-- Login -->
+    <string name="title_login">ITTRAN</string>
+    <string name="login">Usuário: </string>
+    <string name="password">Senha: </string>
+    <string name="continuar_concetado">Continuar Concetado</string>
+
+    <!-- Buttons -->
+    <string name="entrar">Entrar</string>
+    <string name="button_next">Próximo</string>
+    <string name="button_back">Anterior</string>
+    <string name="button_save">Salvar</string>
+    <string name="button_alterar">Alterar</string>
+
+    <!-- Informações do Veículo -->
+
+    <string name="title_placa">Informações do Veículo</string>
+    <string name="lblplaca">Placa:</string>
+    <string name="lblestado">Estado:</string>
+    <string name="lblcidade">Cidade:</string>
+    <string name="lblespecie">Espécie:</string>
+    <string name="lbltipo">Tipo:</string>
+    <string name="lblmarca">Marca:</string>
+    <string name="lblmodelo">Modelo:</string>
+    <string name="btnnext">Próximo</string>
+    <string name="title">Informações do Veículo</string>
+
+    <!-- Spiners Veículo -->
+
+    <string name="estados_prompt">Estados</string>
+
+    <string-array name="estados_arrays">
+        <item>SC</item>
+        <item>PR</item>
+        <item>RS</item>
+    </string-array>
+
+    <string name="cidades_prompt">Cidades</string>
+
+    <string-array name="cidades_arrays">
+        <item>SFS</item>
+        <item>CTBA</item>
+        <item>PG</item>
+    </string-array>
+
+    <string name="especie_prompt">Espécie</string>
+
+    <string-array name="especie_arrays">
+        <item>Carga</item>
+        <item>Especial</item>
+        <item>Misto</item>
+        <item>Passageiro</item>
+        <item>Tração</item>
+    </string-array>
+
+    <string name="tipo_prompt">Tipo</string>
+
+    <string-array name="tipo_arrays">
+        <item>Automóvel</item>
+        <item>Caminhão</item>
+        <item>Caminhinete</item>
+        <item>Camioneta</item>
+        <item>Microônibus</item>
+        <item>Motocicleta</item>
+        <item>Ônibus</item>
+        <item>Motoneta</item>
+        <item>Outros</item>
+    </string-array>
+
+    <string name="marca_prompt">Marca</string>
+
+    <string-array name="marca_arrays">
+        <item>AUDI</item>
+        <item>BMW</item>
+        <item>CITROEN</item>
+        <item>Outros</item>
+    </string-array>
+
+    <!-- Informações da Infração -->
+    <string name="title_infracao">Informações da Infração</string>
+    <string name="lbl_local_infracao">Local: </string>
+    <string name="lbl_infracao">Infração: </string>
+    <string name="lbl_observacao">Observações: </string>
+
+    <!-- Edit Local Infração -->
+    <string name="title_edit_local_infracao">Alterar Local da Infração</string>
+    <string name="tv_rua">Rua: </string>
+    <string name="tv_numero">Nº: </string>
+    <string name="tv_bairro">Bairro: </string>
+    <string name="tv_cidade_estado">Cidade/UF: </string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="btn_change">Alterar</string>
+
+    <!-- Informações do Condutor -->
+    <string name="title_condutor">Informações do Condutor</string>
+    <string name="lbl_nome_condutor"> Nome:</string>
+    <string name="radio_cnh">CNH </string>
+    <string name="radio_ppd">PPD </string>
+    <string name="radio_cpf">CPF </string>
+    <string name="radio_rg">RG </string>
+    <string name="input_cnh_ppd">CNH/PPD: </string>
+    <string name="input_cpf_rg">CPF/RG: </string>
+    <string name="lbl_nf">NF: </string>
+
+    <!-- Sobre -->
+    <string name="title_sobre">Sobre a Aplicação</string>
+    <string name="txt_desenvolvido_por">Desenvolvido por:</string>
+    <string name="txt_endereco"> IFC Câmpus Araquari, Rod. BR 280 - km 27 - Cx. Postal 21 - CEP 89245-000 - Araquari - SC</string>
+    <string name="txt_contato">Fone: (47) 3803-7200 - Fax (47) 3803-7201</string>
+    <string name="title_activity_client_rest_envia_dados">ClientRestEnviaDados</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_camera">Camera</string>
+    <string name="title_activity_utils">Utils</string>
+
+</resources>

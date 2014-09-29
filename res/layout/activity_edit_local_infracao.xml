@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginBottom="20dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_rua"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/tv_rua"
+            android:textSize="16sp" />
+        
+		<EditText
+		    android:id="@+id/et_rua"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:ems="10"
+		    android:inputType="text" >
+
+        </EditText>
+        
+		
+		  
+    </LinearLayout>
+
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_numero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_numero"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp" 
+            android:textSize="16sp"/>
+        
+        <EditText
+            android:id="@+id/et_numero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:ems="10"
+            android:inputType="text"  />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+         <TextView
+            android:id="@+id/tv_bairro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_bairro"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp" 
+            android:textSize="16sp"/>
+          
+         <EditText
+            android:id="@+id/et_bairro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:ems="10" 
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+         
+       <TextView
+            android:id="@+id/tv_cidade_estado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_cidade_estado"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16sp"
+             />
+
+        <EditText
+            android:id="@+id/et_cidade_estado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:ems="10"
+            android:inputType="text" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/btn_cancel"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_change"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:text="@string/btn_change"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

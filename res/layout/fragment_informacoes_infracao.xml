@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/container"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical" >
+
+     <LinearLayout
+        android:id="@+id/linearhorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="vertical"
+        android:gravity="center" 
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/title_infracao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_infracao"
+            android:textSize="35sp"
+            />
+	</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/local_infracao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/lblLocalInfracao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0"
+                    android:text="@string/lbl_local_infracao"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edit_local_infracao"
+                    android:layout_width="812dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.36"
+                    android:ems="10"
+                    android:text="Rua das Flores, nº 10 - Centro, Joinville - SC" />
+
+                <Button
+                    android:id="@+id/btn_edit"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="0"
+                    android:background="@drawable/icon_edit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pesquisar_infracao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" 
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/lbl_pesquisa_infracao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_infracao" 
+                    android:textSize="20sp"
+                    android:layout_weight="0"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <SearchView
+                    android:id="@+id/search_infracao"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                </SearchView>
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/check_infracao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal" 
+                    android:layout_marginTop="0dp">
+                
+                 <TextView
+                     android:id="@+id/lbl_id_infracao"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="0"
+                     android:text="5421. Estacionar no passageiro"
+                     android:textSize="20sp" />
+                 
+                 <CheckBox
+                     android:id="@+id/confirmar_infracao"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="0"
+                     android:layout_marginLeft="40dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/observacoes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                 >
+
+            <TextView
+                android:id="@+id/lbl_observacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_observacao" 
+                android:textSize="20sp"
+                android:layout_weight="0"/>
+
+            <EditText
+                android:id="@+id/txt_observacao"
+                android:layout_width="fill_parent"
+                android:layout_height="85dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/textbox"
+                android:ems="10"
+                android:inputType="textMultiLine" >
+
+                <requestFocus />
+            </EditText>
+              </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/capturar_foto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+               
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/icon_photo" 
+                    android:layout_weight="0"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buttons2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp" >
+
+                <Button
+                    android:id="@+id/button_back1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:background="@drawable/icon_back" />
+
+                <Button
+                    android:id="@+id/button_next2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/icon_next" />
+            
+            </LinearLayout>
+
+     </LinearLayout>
+           
+          
+     
+        
+        
+        
+        
+</LinearLayout>
