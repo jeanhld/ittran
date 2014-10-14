@@ -58,7 +58,7 @@ public class JsonAct{
 		
 		try {
 			
-			writeFile("../sdcard/RUCC-"+getDate()+".json");
+			writeFile("RUCC-"+getDate()+".json");
 	 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -84,7 +84,7 @@ public class JsonAct{
 		json.put("condutor", condutor_json);
 		
 		try {
-			writeFile("../sdcard/RUSC-"+getDate()+".json");
+			writeFile("RUSC-"+getDate()+".json");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -140,12 +140,12 @@ public class JsonAct{
 	        json.put("multas", jsonArray_stampi);
 		}
             
-        writeFile("../sdcard/RMCC.json");
+        writeFile("RMCC.json");
 	}
 	
 	public void writeFile(String name) throws IOException{
 		
-		FileWriter file = new FileWriter(name);
+		FileWriter file = new FileWriter("../sdcard0/multas/"+name);
 		file.write(json.toString());
 		file.flush();
 		file.close();

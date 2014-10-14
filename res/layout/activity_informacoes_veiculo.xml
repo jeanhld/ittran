@@ -63,6 +63,7 @@
 	                android:layout_gravity="center"
 	                android:ems="10"
 	                android:inputType="text"
+	                android:digits="1,2,3,4,5,6,7,8,9,0,qwertyuioplkjhgfdsazxcvbnm"
 	                android:layout_weight="0" />
             
              </LinearLayout>

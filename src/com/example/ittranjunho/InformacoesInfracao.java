@@ -34,9 +34,11 @@ public class InformacoesInfracao extends Activity {
 	
 	 // Activity request codes
 	static final int REQUEST_IMAGE_CAPTURE = 1;
-    private static final int ONLY_STREET = 1;
-    private static final int STREET_ONENUMB_NEIGHBORHOOD = 2;
-    private static final int STREET_TWONUMB_NEIGHBORHOOD = 3;
+    private static final int ONE_ELEMENT = 1;
+    private static final int TWO_ELEMENTS = 2;
+    private static final int THREE_ELEMENTS = 3;
+
+    
     
     boolean first = true;
     boolean imgC1 = false,imgC2 = false,imgC3 = false,imgC4 = false;
@@ -64,11 +66,7 @@ public class InformacoesInfracao extends Activity {
 		//Cria button up na action-bar
 		ActionBar actionBar = getActionBar();
 	    actionBar.setDisplayHomeAsUpEnabled(true);
-	    
-	    // Inicia serviço de GPS para obter endereço atual
-	    InitGps();
-	    
-		
+
 		// Atribuindo os valores das id às variáveis
 	    local_infracao = (TextView) findViewById(R.id.edit_local_infracao);
 	    id_infracao = (TextView) findViewById(R.id.lbl_id_infracao);
@@ -82,6 +80,8 @@ public class InformacoesInfracao extends Activity {
 		imgCam3=(ImageView)findViewById(R.id.imgCam3);
 		imgCam4=(ImageView)findViewById(R.id.imgCam4);
 		
+		// Inicia serviço de GPS para obter endereço atual
+	    InitGps();
 		
 		// FUNCIONALIDADE DOS BOTÕES
 		// Button Back - redireciona para a tela de Informações do Veículo
@@ -119,12 +119,21 @@ public class InformacoesInfracao extends Activity {
 	    	// Chamando o evento onClick para acessar a tela Editar Local da Infração
 	    	@Override
 	    	public void onClick(View v){
-	    		
-	    		String[] list = getSplitAddress(local_infracao.getText().toString());
-	    		String rua = list[0];
-	    		String numero = list[1];
-	    		String bairro = list[2];
-
+	    		String rua=null, numero=null, bairro=null;
+	    		String local = local_infracao.getText().toString().trim();
+	    		String[] list = null;
+	    		if(local.contains(",")){
+		    		list = getSplitAddress(local);
+		    		rua = list[0].trim();
+		    		numero = list[1].trim();
+		    		bairro = list[2].trim(); 
+	    		}
+	    		else{
+	    			list = local.split(" - ");
+		    		rua = list[0].trim();
+		    		numero = "";
+		    		bairro = list[1].trim();
+	    		}
 	    		EditLocalInfracao mydialog = new EditLocalInfracao(context, rua, numero, bairro);
 	            mydialog.show();
 	    	}
@@ -175,7 +184,8 @@ public class InformacoesInfracao extends Activity {
 			e.printStackTrace();
 		}
 		streetGps = address.getAddressLine(0);
-		local_infracao.setText(streetGps);
+		String[] list_address = getSplitAddress(streetGps);
+		local_infracao.setText(list_address[0].trim()+" - "+list_address[2].trim());
 		
 	}
 	
@@ -263,20 +273,20 @@ public class InformacoesInfracao extends Activity {
 	public String[] getSplitAddress(String endereco){
 		String[] list = {"","",""};
 		int length = getLengthList(endereco);
-		if(length == ONLY_STREET){
+		if(length == ONE_ELEMENT){
 			list[0] = endereco;
 		}
-		if(length == STREET_ONENUMB_NEIGHBORHOOD){
+		if(length == TWO_ELEMENTS){
 			String[] ruaSplit = endereco.split(","); 
 			list[0] = ruaSplit[0];
-	    	String[] bairroSplit = ruaSplit[1].split("-");
+	    	String[] bairroSplit = ruaSplit[1].split(" - ");
 	    	list[1] = bairroSplit[0];
 	    	list[2] = bairroSplit[1];
 		}
-		if(length == STREET_TWONUMB_NEIGHBORHOOD){
+		if(length == THREE_ELEMENTS){
 			String[] ruaSplit = endereco.split(","); 
 			list[0] = ruaSplit[0];
-	    	String[] bairroSplit = ruaSplit[1].split("-");
+	    	String[] bairroSplit = ruaSplit[1].split(" - ");
 	    	list[1] = bairroSplit[0]+"-"+bairroSplit[1];
 	    	list[2] = bairroSplit[2];
 		}
@@ -284,7 +294,7 @@ public class InformacoesInfracao extends Activity {
 	}
 	
 	public int getLengthList(String endereco){
-		String[] list = endereco.split("-");
+		String[] list = endereco.split(" - ");
 		int lengthList = list.length;
 		return lengthList;
 	}

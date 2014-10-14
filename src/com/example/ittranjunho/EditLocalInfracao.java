@@ -55,9 +55,9 @@ public class EditLocalInfracao extends Dialog {
 	}
     
     public void changeAddress(){
-    	this.setRua(edit_rua.getText().toString());
-		this.setNumero(edit_numero.getText().toString());
-		this.setBairro(edit_bairro.getText().toString());
+    	this.setRua(edit_rua.getText().toString().trim());
+		this.setNumero(edit_numero.getText().toString().trim());
+		this.setBairro(edit_bairro.getText().toString().trim());
 		
 		changeLabel(this.rua, this.numero, this.bairro);
     }
@@ -66,7 +66,7 @@ public class EditLocalInfracao extends Dialog {
 
 	private void changeLabel(String rua, String numero, String bairro) {
 		
-		setChanges(rua+", "+numero+", "+bairro);
+		setChanges(rua+", "+numero+" - "+bairro);
 		InformacoesInfracao.local_infracao.setText(this.changes);
 		
 	}
